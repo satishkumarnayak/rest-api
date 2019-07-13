@@ -24,6 +24,42 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.5</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.15</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.dalesbred/dalesbred -->
+		 <dependency> <groupId>org.dalesbred</groupId> <artifactId>dalesbred</artifactId> 
+			<version>1.3.0</version> </dependency> 
+		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.0-api -->
+	 	<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<version>1.0.1.Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
+<!-- 		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.2.Final</version>
+		</dependency>
+ -->
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.2.6.Final</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -38,7 +74,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
 				<configuration>
-					<release>11</release>				
+					<release>11</release>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -46,6 +82,23 @@
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.4.18.v20190429</version>
 			</plugin>
+		<!-- 	
+			<plugin>
+				<groupId>io.github.divinespear</groupId>
+				<artifactId>jpa-schema-maven-plugin</artifactId>
+				<version>0.1.12</version>
+				<configuration>
+					...
+				</configuration>
+				<executions>
+					if you want auto-generate schema on lifecycle. default lifecycle is "process-classes".
+					...
+				</executions>
+				<dependencies>
+					JDBC driver here (if you don't defined in dependencies)
+					...
+				</dependencies>
+			</plugin> -->
 		</plugins>
 	</build>
 

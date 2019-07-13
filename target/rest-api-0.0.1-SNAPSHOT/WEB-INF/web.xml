@@ -6,13 +6,26 @@
 
 <web-app>
 
-	<servlet>
-		<servlet-name>BasicServlet</servlet-name>
-		<servlet-class>com.instanceofcake.rest.BasicServlet</servlet-class>
-	</servlet>
 
+	<servlet>
+	   <servlet-name>RouterServlet</servlet-name>
+	   <servlet-class>com.instanceofcake.rest.router.RouterServlet</servlet-class>
+	</servlet>
+	
 	<servlet-mapping>
-		<servlet-name>BasicServlet</servlet-name>
-		<url-pattern>/</url-pattern>
+	   <servlet-name>RouterServlet</servlet-name>
+	   <url-pattern>/*</url-pattern>
 	</servlet-mapping>
+
+	<!-- <servlet> <servlet-name>BasicServlet</servlet-name> <servlet-class>com.instanceofcake.rest.BasicServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>BasicServlet</servlet-name> <url-pattern>/hello</url-pattern> 
+		</servlet-mapping> <servlet> <servlet-name>SecondServlet</servlet-name> <servlet-class>com.instanceofcake.rest.SecondServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>SecondServlet</servlet-name> <url-pattern>/second</url-pattern> 
+		</servlet-mapping> <servlet> <servlet-name>Todos</servlet-name> <servlet-class>com.instanceofcake.rest.TodosServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>Todos</servlet-name> <url-pattern>/todos</url-pattern> 
+		</servlet-mapping> <servlet> <servlet-name>Todo</servlet-name> <servlet-class>com.instanceofcake.rest.TodoServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>Todo</servlet-name> <url-pattern>/todos/*</url-pattern> 
+		</servlet-mapping> -->
+
+
 </web-app>  
