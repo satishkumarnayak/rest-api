@@ -1,10 +1,7 @@
 com\instanceofcake\rest\Util.class
-com\instanceofcake\rest\App.class
-com\instanceofcake\rest\BasicServlet.class
 com\instanceofcake\rest\database\DB.class
-com\instanceofcake\rest\TodosServlet.class
 com\instanceofcake\rest\TodoServlet.class
-com\instanceofcake\rest\Todos.class
-com\instanceofcake\rest\SecondServlet.class
+com\instanceofcake\rest\router\Response.class
+com\instanceofcake\rest\router\Request.class
 com\instanceofcake\rest\router\RouterServlet.class
 com\instanceofcake\rest\Todo.class

@@ -8,12 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.instanceofcake.rest.TodoServlet;
-import com.instanceofcake.rest.TodosServlet;
 
 public class RouterServlet extends HttpServlet {
 
 	private static final TodoServlet TODOSERVLET = new TodoServlet();
-	private static final TodosServlet TODOSSERVLET = new TodosServlet();
 
 	private String requestURI;
 
@@ -22,8 +20,6 @@ public class RouterServlet extends HttpServlet {
 		requestURI = req.getRequestURI();
 		if (requestURI.startsWith("/todos/")) {
 			TODOSERVLET.doGet(req, resp);
-		} else if (requestURI.startsWith("/todos")) {
-			TODOSSERVLET.doGet(req, resp);
 		} else {
 			noHandler(resp);
 		}
@@ -39,8 +35,6 @@ public class RouterServlet extends HttpServlet {
 		requestURI = req.getRequestURI();
 		if (requestURI.startsWith("/todos/")) {
 			TODOSERVLET.doPost(req, resp);
-		} else if (requestURI.startsWith("/todos")) {
-			TODOSSERVLET.doPost(req, resp);
 		} else {
 			noHandler(resp);
 		}
